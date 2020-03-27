@@ -1,0 +1,6 @@
+metastore_db/**
+spark_warehouse/**
+code/__pycache__/**
+.ipynb_checkpoints/**
+data/**
+code/.*
