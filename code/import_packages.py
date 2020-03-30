@@ -16,6 +16,7 @@ import multiprocessing
 
 ### data wrangling
 import pandas as pd
+import geopandas as gpd
 pd.options.display.float_format = '{:,.0f}'.format
 pd.set_option("display.max_rows", 100)
 pd.options.display.max_columns = 100
@@ -28,15 +29,34 @@ import copy
 import json
 
 ### plotting
+import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+import matplotlib.lines as mlines
+from matplotlib.ticker import FuncFormatter
+import matplotlib.gridspec as gridspec
+font = {'family' : 'DejaVu Sans',
+        'weight' : 'normal',
+        'size'   : 20}
+matplotlib.font_manager._rebuild()
+plt.rc('font', **font)
+import plotly.graph_objects as go
+import dash
 import seaborn as sns
+import folium
+import gif
+from folium.plugins import HeatMap, DualMap, Fullscreen
+from folium.features import DivIcon
+from branca.element import Template, MacroElement
+import locale
+import branca
+import math
+from scipy import stats
+from string import ascii_letters
 
 ### jupyter
-from IPython.display import HTML
 import warnings
 warnings.filterwarnings('ignore')
-import os
 from IPython.display import display, HTML
 
 display(HTML(data="""

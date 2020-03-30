@@ -5,8 +5,8 @@ from import_packages import *
 
 # start spark session
 spark = SparkSession.builder.master("local[*]") \
-.config("spark.driver.maxResultSize", "2g") \
-.config("spark.driver.memory", "8g") \
+.config("spark.driver.maxResultSize", "8g") \
+.config("spark.driver.memory", "10g") \
 .config("spark.sql.session.timeZone", "UTC") \
 .config("spark.sql.execution.arrow.enabled", "true")\
 .getOrCreate()

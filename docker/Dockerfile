@@ -7,6 +7,18 @@ RUN conda install --quiet --yes -c \
 
 RUN pip install -U networkx \
                    sklearn \
-                   plotly
+                   plotly \
+                   dash \
+                   geopandas \
+                   folium \
+                   gif \
+                   descartes \
+                   cufflinks \
+                   rise
+
+RUN jupyter labextension install @jupyterlab/toc && \
+jupyter-nbextension install rise --py --sys-prefix && \
+jupyter-nbextension enable rise --py --sys-prefix
+
 VOLUME /home/jovyan/work
 WORKDIR /home/jovyan/work
