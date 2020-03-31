@@ -3,11 +3,12 @@
 by Sebastian Wolf
 
 ## Content
-The repo is organized in four folders:
-- `data`: place the [data](https://storage.googleapis.com/datatonic-steam-gaming-challenge/steam_gaming_large.zip) here
+The repo is organized in three folders:
 - `code`: holds all notebooks, utility .py files, and notebooks saved as htmls for easy viewing
 - `docker` : a dockerfile to re-create the environment I used. Clone the repository, cd into it's root, then run `docker-compose up` and open the jupyter notebooks.
 - `html_maps` : a map output showing gamers geographical distribution
+
+To re-un the analysis, copy the [steam data](https://storage.googleapis.com/datatonic-steam-gaming-challenge/steam_gaming_large.zip) into a `data` foder in the root of the repository.
 
 ## Solution
 My solution to the challenge is split in three notebooks:
