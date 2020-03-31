@@ -15,4 +15,4 @@ My solution to the challenge is split in three notebooks:
 - [analytics.ipynb](./code/analytics.ipynb) / [analytics.html](./code/analytics.html) - (Exercise 2)
 - [advanced.ipynb](./code/advanced.ipynb) / [advanced.html](./code/advanced.html) / [advanced.slides.html](./code/advanced.slides.html) - (Exercise 3)
 
-***Note***: For the **analytics** challenge (Exercise 2), I created a slide set [analytics.slides.html](./code/analytics.slides.html).
+***Note***: For the **analytics** challenge (Exercise 2), I created a slide set [analytics.slides.html](./code/analytics.slides.html), read that instead of the notebook.
