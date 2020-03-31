@@ -11,10 +11,10 @@ The repo is organized in four folders:
 
 ## Solution
 My solution to the challenge is split in three notebooks:
-- data_engineering.ipynb
-- analytics.ipynb
-- advanced.ipynb
+- [data_engineering.ipynb](./code/data_engineering.ipynb) - (Exercsie 1)
+- [analytics.ipynb](./code/analytics.ipynb) - (Exercsie 2)
+- [advanced.ipynb](./code/advanced.ipynb) - (Exercsie 3)
 
-The `code` folder also include html versions of these notebooks.
+The `code` folder also includes html versions of these notebooks.
 
-For the *analytics* challenge (Exercise 2), I created a slide set [here](./code/analytics.slides.html).
+For the **analytics** challenge (Exercise 2), I created a slide set [analytics.slides.html](./code/analytics.slides.html).
