@@ -13221,7 +13221,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Player_Summaries&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_Publishers&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_Genres&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_Developers&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_1&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list of tables we want to load</span>
+<span class="n">dfs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Player_Summaries&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_Publishers&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_Genres&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_Developers&#39;</span><span class="p">,</span> <span class="s1">&#39;Games_1&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13234,7 +13235,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark_handler</span> <span class="o">=</span> <span class="n">spark_df_handler</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load raw data and count rows</span>
+<span class="n">spark_handler</span> <span class="o">=</span> <span class="n">spark_df_handler</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of records </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">dfs</span><span class="p">:</span>
     <span class="n">spark_handler</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">each</span><span class="p">)</span>
@@ -13276,7 +13278,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check player summary table</span>
+<span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13478,7 +13481,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check publisher table</span>
+<span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13560,7 +13564,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check genres table</span>
+<span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13642,7 +13647,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check developers table</span>
+<span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13724,7 +13730,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">4</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check games table</span>
+<span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">4</span><span class="p">]]</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13831,7 +13838,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">games</span> <span class="o">=</span> <span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>\
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># join the games tables</span>
+<span class="n">games</span> <span class="o">=</span> <span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>\
     <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="s1">&#39;appid&#39;</span><span class="p">)</span>\
     <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="s1">&#39;appid&#39;</span><span class="p">)</span>\
     <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">4</span><span class="p">]],</span> <span class="s1">&#39;appid&#39;</span><span class="p">)</span>
@@ -13960,7 +13968,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">games_per_publisher</span> <span class="o">=</span> <span class="n">games</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Publisher&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">countDistinct</span><span class="p">(</span><span class="s1">&#39;appid&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;number_of_games&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># count games per publisher</span>
+<span class="n">games_per_publisher</span> <span class="o">=</span> <span class="n">games</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Publisher&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">countDistinct</span><span class="p">(</span><span class="s1">&#39;appid&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;number_of_games&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 <span class="n">games_per_publisher</span>
 </pre></div>
 
@@ -14074,7 +14083,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">games_per_genre</span> <span class="o">=</span> <span class="n">games</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Genre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">countDistinct</span><span class="p">(</span><span class="s1">&#39;appid&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;number_of_games&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># count games per genre</span>
+<span class="n">games_per_genre</span> <span class="o">=</span> <span class="n">games</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Genre&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">countDistinct</span><span class="p">(</span><span class="s1">&#39;appid&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;number_of_games&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 <span class="n">games_per_genre</span>
 </pre></div>
 
@@ -14249,7 +14259,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_summaries</span> <span class="o">=</span> <span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get the summary table</span>
+<span class="n">player_summaries</span> <span class="o">=</span> <span class="n">spark_handler</span><span class="o">.</span><span class="n">dfraw</span><span class="p">[</span><span class="n">dfs</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 </pre></div>
 
     </div>
@@ -14313,7 +14324,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_summaries_dayhour</span> <span class="o">=</span> <span class="n">player_summaries</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dayhour_created&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get account creation count by dayhour</span>
+<span class="n">player_summaries_dayhour</span> <span class="o">=</span> <span class="n">player_summaries</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dayhour_created&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">player_summaries_dayhour</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
@@ -14482,7 +14494,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_summaries_day</span> <span class="o">=</span> <span class="n">player_summaries</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;day_created&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get account creation count by day</span>
+<span class="n">player_summaries_day</span> <span class="o">=</span> <span class="n">player_summaries</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;day_created&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">player_summaries_day</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
@@ -14590,7 +14603,8 @@ Games_1 : 15426029
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_summaries_hour</span> <span class="o">=</span> <span class="n">player_summaries</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;day_created&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">25</span><span class="p">))</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;hour_created&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get account creation count by hour</span>
+<span class="n">player_summaries_hour</span> <span class="o">=</span> <span class="n">player_summaries</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;day_created&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">25</span><span class="p">))</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;hour_created&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">player_summaries_hour</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 </pre></div>
 
